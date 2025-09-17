@@ -11,7 +11,7 @@ Une application web développée pour la Région Auvergne-Rhône-Alpes afin de f
 - [Structure du projet](#-structure-du-projet)
 - [Installation](#-installation)
 - [Lancement](#-lancement)
-- [Documentation](#-documentation)
+- [Livrables](#-livrables)
 
 ## 🎯 À propos
 
@@ -37,6 +37,7 @@ La Région Auvergne-Rhône-Alpes, forte de son riche écosystème artisanal (pr�
 - **Sass** - Préprocesseur CSS
 - **React Router DOM** - Navigation
 - **Fetch API** - Requêtes HTTP
+- **Hooks personnalisés** - Pour la gestion dynamique des titres et méta-descriptions des pages
 
 ### Backend
 
@@ -59,8 +60,7 @@ Avant l'installation, assurez-vous d'avoir :
 
 - **Node.js** (version 18.x ou supérieure) - [Télécharger](https://nodejs.org/)
 - **npm** (inclus avec Node.js)
-- **Serveur MySQL** (version 8.x recommandée)
-  - WampServer, XAMPP, MAMP ou installation MySQL directe
+- **Serveur MySQL** (version 8.x recommandée) - **La base de données sera hébergée localement pour ce devoir.**
 - **phpMyAdmin** ou MySQL Workbench pour la gestion de la base
 - **Éditeur de code** (VS Code recommandé)
 
@@ -68,23 +68,25 @@ Avant l'installation, assurez-vous d'avoir :
 
 ```
 trouver_mon_artisan_app/
-├── backend/                    # API Node.js
+├── backend/                   # API Node.js
 │   ├── config/                # Configuration base de données
 │   ├── controllers/           # Logique métier
 │   ├── models/                # Modèles Sequelize
 │   ├── routes/                # Endpoints API
 │   ├── .env                   # Variables d'environnement backend
-│   ├── server.js              # Point d'entrée API
-│   └── package.json
+│   ├── create.sql             #Script de création de la base de données
+│   ├── seed.sql               #Script d'ajout de données à la base de données
+│   └── server.js              # Point d'entrée API
 ├── public/                    # Assets statiques
 ├── src/                       # Code source React
-│   ├── assets/               # Images
-│   ├── components/           # Composants réutilisables
-│   ├── pages/                # Composants de pages
-│   ├── styles/               # Fichiers Sass
-│   ├── App.js                # Composant racine et routage
-│   └── index.js              # Point d'entrée React
-├── .env                      # Variables d'environnement frontend
+│   ├── assets/                # Images
+│   ├── components/            # Composants réutilisables
+|   ├── Hooks/                 # Hooks React personnalisés
+│   ├── views/                 # Composants de pages
+│   ├── styles/                # Fichiers Sass
+│   ├── App.js                 # Composant racine et routage
+│   └── index.js               # Point d'entrée React
+├── .env                       # Variables d'environnement frontend
 ├── .gitignore
 ├── package.json
 └── README.md
@@ -106,10 +108,7 @@ trouver_mon_artisan_app/
 # Naviguez vers le dossier backend
 cd trouver_mon_artisan_app/backend
 
-# Installez les dépendances
-npm install
-
-# Créez le fichier .env avec vos paramètres MySQL
+# Créez le fichier .env avec vos paramètres MySQL (accès local uniquement)
 echo "DB_HOST=127.0.0.1
 DB_USER=root
 DB_PASSWORD=
@@ -144,6 +143,8 @@ node server.js
 
 Vérifiez sur : http://localhost:3001/api/artisans/top
 
+## Note importante pour le déploiement en ligne : L'application React est déployée sur GitHub Pages. Pour que celle-ci fonctionne pleinement, l'API backend doit être lancée séparément (localement par l'évaluateur ou sur un autre service).
+
 ### Démarrer le frontend
 
 ```bash
@@ -151,13 +152,11 @@ cd trouver_mon_artisan_app
 npm start
 ```
 
-✅ L'application s'ouvre automatiquement sur : http://localhost:3000
-
-## 📖 Documentation
+## 📖 Livrables
 
 - 📊 **Rapport de conception** : [Lien vers le PDF](../trouver_mon_artisan_app/src/assets/Pdf/RAPPORT_DE_CONCEPTION_ET_DÉVELOPPEMENT_Trouve_ton_artisan.pdf)
-- 🎨 **Maquettes Figma** : [[Lien vers le projet Figma](https://www.figma.com/design/xOKsqnGnTt8A0tjQ3q9XyU/Devoir-Bilan-Morieux-Tony?node-id=0-1&t=mYo54lJSy2OAwu4I-1)]
-- 🌐 **Application en ligne** : [Lien vers le site déployé]
+- 🎨 **Maquettes Figma** : [Lien vers le projet Figma](https://www.figma.com/design/xOKsqnGnTt8A0tjQ3q9XyU/Devoir-Bilan-Morieux-Tony?node-id=0-1&t=mYo54lJSy2OAwu4I-1)
+- 🌐 **Application en ligne** : [Lien vers le site déployé](https://toon-mo.github.io/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/)
 
 ---
 
