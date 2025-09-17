@@ -1,0 +1,286 @@
+@import "../settings";
+
+//Style de la navbar
+.navbar {
+  height: 166px;
+  @media (max-width: 992px) {
+    height: 60px;
+  }
+}
+//Style du Logo
+.navbar-brand .img-fluid {
+  margin-left: 88px;
+
+  @media (max-width: 1280px) {
+    margin-left: 69.5px;
+  }
+  @media (max-width: 992px) {
+    width: 180px;
+    height: 102px;
+    margin-left: 3.5px;
+    margin-top: -30px;
+  }
+}
+.navbar-nav {
+  width: 558px;
+  justify-content: center;
+  @media (max-width: 1280px) {
+    width: 402px;
+  }
+}
+//===========================================//
+//Menu
+//===========================================//
+
+//taille du container des ul
+#navbarText ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+//liens de navigation
+.nav-item a {
+  font-size: 1.5rem;
+  color: $color-4;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    font-weight: bold;
+    color: $color-6;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 1.19rem;
+  }
+}
+
+// Affichage items pour l'affichage desktop
+.navbar-nav .nav-item {
+  margin-left: 39px;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+}
+
+// Barre de recherche
+.desktopSearchForm {
+  width: 300px !important;
+  height: 41px !important;
+}
+.form-control {
+  width: 254px !important;
+  height: 41px !important;
+}
+
+// Correction: Sélecteur de placeholder
+input::placeholder {
+  font-size: 14px;
+}
+
+// Supprimer la croix native sur certains navigateurs
+input::-webkit-search-cancel-button,
+input::-webkit-search-decoration,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.imgSearch {
+  width: 27px;
+  height: 28px;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+//Aligne le menu burger dans la navbar
+.menuHamburger {
+  margin-top: -30px !important;
+}
+.navbar-toggler {
+  width: 54px !important;
+  height: 54px !important;
+  background: $color-1 !important;
+  border: none !important;
+}
+
+// alignement du text sous le menu burger
+.text-toggler {
+  font-size: $font-size-6 !important;
+  margin-top: -12px !important;
+  margin-left: 12px !important;
+  color: $color-2 !important;
+  visibility: hidden !important;
+  @media (max-width: 992px) {
+    visibility: visible !important;
+  }
+}
+//changement du logo du menu burger
+.navbar-toggler-icon {
+  background-image: url(../../assets/images/dot-menu.png) !important;
+}
+
+//===========================================//
+// Modification de l'affichage au breakpoint 1180px
+//===========================================//
+
+// Formulaire de recherche  affichage desktop
+.desktop-search-form {
+  width: 300px !important;
+  height: 41px !important;
+  display: none !important; // Masqué par défaut pour les écrans inférieur à 1140px)
+}
+
+// Bouton de recherche alternatif pour les mobiles
+#btnSearch2 {
+  width: 54px !important;
+  height: 50px !important;
+  background: $color-1 !important;
+  display: flex !important; // Visible par défaut pour les écrans inférieurs à 1180px)
+  align-items: center; // Centre l'icône verticalement
+  justify-content: center; // Centre l'icône horizontalement
+  @media (max-width: 992px) {
+    margin-top: -30px;
+  }
+}
+
+// Après le breakpoint 1180px: le formulaire desktop apparaît et le bouton alternatif disparaît
+@media (min-width: 1180px) {
+  .desktop-search-form {
+    display: flex !important; // Le formulaire desktop apparaît
+  }
+  #btnSearch2 {
+    display: none !important; // Le bouton mobile disparaît
+  }
+}
+
+// Styles et animation du menu déroulant principal (navbarText) pour mobile (< 992px)
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100% !important; // Se positionne juste en dessous de la barre de navigation
+    right: 0 !important; // Aligne le menu déroulant sur le bord droit
+    width: 171px !important;
+    height: 210px !important;
+    background-color: $color-1;
+    border: 1px solid $color-1;
+    border-color: $color-3;
+    border-radius: 20px 0 0 20px;
+    z-index: 1020;
+
+    // Par défaut le menu est à droite de l'écran et invisible
+    transform: translateX(100%) !important;
+    visibility: hidden !important;
+    transition: transform 0.3s ease-out, visibility 0.3s ease-out !important;
+
+    // Au lancement de l'animation
+    &.show {
+      transform: translateX(0) !important; // Glisse vers sa position normale
+      visibility: visible !important;
+    }
+
+    // État pendant la transition (quand Bootstrap ajoute la classe .collapsing)
+    &.collapsing {
+      height: auto !important; // Annule l'animation de hauteur par défaut de Bootstrap
+      overflow: hidden !important; // Cache le débordement pendant la transition
+      transform: translateX(100%) !important; // Assure le départ de la droite
+      visibility: hidden !important; // Reste caché avant de glisser
+      transition: transform 0.3s ease-out, visibility 0.3s ease-out !important;
+    }
+  }
+  // Disposition des liens dans le menu déroulant
+  .navbar-nav {
+    flex-direction: column !important; // Empile les liens verticalement
+    width: 100% !important; // La liste prend toute la largeur du panneau
+    margin-top: -5px !important; // Ajustement de positionnement pour le contenu pour collé au mieux à la maquette
+
+    .nav-item {
+      width: 100% !important;
+      text-align: left !important;
+
+      .nav-link {
+        padding: 12px 15px !important;
+        font-size: 1.25rem !important;
+        color: $color-3 !important;
+
+        &:hover {
+          font-weight: bold !important;
+          color: $color-6 !important;
+        }
+        &.active {
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+}
+
+// Affichage de la barre de recherche mobile au clique du bouton alternatif
+
+.mobile-search-collapse {
+  @media (max-width: 1160px) {
+    position: absolute !important;
+    top: 100% !important; // Se positionne juste en dessous de la barre de navigation
+    right: 0 !important; // Aligne le panneau sur le bord droit
+    width: 276px !important;
+    height: 44px !important;
+    z-index: 1020 !important; // Assure que la barre soit au dessus de tout élément
+
+    // Par défaut la barre est à droite de l'écran et invisible
+    transform: translateX(100%) !important;
+    visibility: hidden !important;
+    transition: transform 0.3s ease-out, visibility 0.3s ease-out !important;
+
+    // Au lancement de l'animation
+    &.show {
+      transform: translateX(0) !important; // Glisse vers sa position normale
+      visibility: visible !important;
+    }
+
+    // État pendant la transition (quand Bootstrap ajoute la classe .collapsing)
+    &.collapsing {
+      height: auto !important; // Annule l'animation de hauteur par défaut de Bootstrap
+      overflow: hidden !important;
+      transform: translateX(100%) !important;
+      visibility: hidden !important;
+      transition: transform 0.3s ease-out, visibility 0.3s ease-out !important;
+    }
+  }
+  #mobileSearchInputForm {
+    border-radius: 15px;
+    background-color: $color-2;
+    color: $color-1;
+    &::placeholder {
+      color: $color-1;
+    }
+  }
+
+  // Masque ce panneau sur desktop
+  @media (min-width: 1140px) {
+    display: none !important;
+  }
+}
+
+// Modification de l'affichage au breakpoint 992px
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: static;
+    transform: none;
+    visibility: visible;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    width: auto;
+    height: auto !important; // Hauteur flexible sur desktop
+    overflow: visible;
+  }
+  .navbar-nav {
+    flex-direction: row; // Remet les liens en ligne sur desktop
+  }
+}

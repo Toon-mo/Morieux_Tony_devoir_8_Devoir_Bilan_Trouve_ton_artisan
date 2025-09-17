@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Graphik-Regular-Trial.otf);
+}
+
+//===========================================//
+//Variables
+//===========================================//
+
+//variable de font
+$font-1: "font-1", sans-serif;
+
+//variable couleur
+$color-1: #f1f8fc;
+$color-2: #0074c7;
+$color-3: #00497c;
+$color-4: #384050;
+$color-5: #cd2c2e;
+$color-6: #82b864;
+
+//Variable texte
+$font-size-1: 2.25rem; // 36px
+$font-size-2: 1.5rem; // 24px
+$font-size-3: 1.25rem; // 20px
+$font-size-4: 1rem; // 16px
+$font-size-5: 0.875rem; // 14px
+$font-size-6: 0.688rem; //11px
+
+//style générale
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-1;
+  font-family: $font-1;
+}
+
+// style pour les listes
+li {
+  list-style-type: none;
+}
+
+//===========================================//
+//Génération de classe de couleur pour bootstrap
+//===========================================//
+
+//Classe de couleur pour la navbar
+.bg-custom {
+  background-color: $color-1;
+}
+
+//Classe de couleur pour le footer
+.bg-custom-1 {
+  background-color: $color-2;
+}
+
+//Classe de couleur de texte
+.text-color1 {
+  color: $color-1;
+}
+.text-color2 {
+  color: $color-2;
+}
+.text-color3 {
+  color: $color-3;
+}
+.text-color4 {
+  color: $color-4;
+}
+.text-color5 {
+  color: $color-5;
+}
+.text-color6 {
+  color: $color-6;
+}
+
+//===========================================//
+//Style pour les pages bâtiment, service, fabrication et alimentation
+//===========================================//
+
+.MainPage {
+  margin-top: 60px;
+}
+
+//===========================================//
+//Style et taille pour imageCard.js
+//===========================================//
+
+.imgCard {
+  object-fit: cover;
+
+  &--medium {
+    width: 144px !important;
+    height: 144px !important;
+    border-radius: 20px !important;
+  }
+
+  &--large {
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 25px !important;
+  }
+}

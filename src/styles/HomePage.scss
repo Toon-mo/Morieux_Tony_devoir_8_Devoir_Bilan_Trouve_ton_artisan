@@ -1,0 +1,33 @@
+@import "../styles/settings";
+
+// Style pour le conteneur de l'image
+.container-img {
+  width: 461px;
+  height: 302px;
+  margin-right: 130px;
+  @media (max-width: 1160px) {
+    display: none !important;
+  }
+}
+
+//Style pour l'image
+.img-fluid {
+  border-radius: 10px;
+}
+
+//Style pour le paragraphe
+.description {
+  width: 500px !important;
+  font-size: $font-size-3;
+  @media (max-width: 1160px) {
+    width: 400px !important;
+    font-size: $font-size-5;
+  }
+}
+
+// Ligne de séparation
+.main-separation {
+  margin: 25px auto;
+  width: 40%;
+  border-bottom: 3px solid $color-5;
+}

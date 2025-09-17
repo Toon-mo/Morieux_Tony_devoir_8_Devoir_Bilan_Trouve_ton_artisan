@@ -1,0 +1,103 @@
+@import "../settings";
+
+#formContainer {
+  position: absolute !important; // Positionne le formulaire par rapport à la fenêtre
+  z-index: 1000 !important; // S'assure que le formulaire est au-dessus des autres éléments
+  top: -120px !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(70%) !important;
+  border-radius: 39px !important;
+  padding: 10px !important;
+  width: 650px !important;
+  height: 530px !important;
+  text-align: center !important;
+  background: $color-4 !important;
+  border-radius: 39px !important;
+  color: $color-6 !important;
+  font-size: $font-size-5 !important;
+  @media (max-width: 1200px) {
+    position: absolute !important;
+    top: -50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(58%) !important;
+    top: 20% !important;
+    width: 288px !important;
+    border-radius: 39px !important; // Bords arrondis à gauche, plat à droite
+  }
+}
+
+// Style des labels
+.form-label {
+  margin-bottom: 3px !important;
+}
+
+// style des input
+.message-input {
+  background: $color-2 !important;
+  width: 609.38px !important;
+  height: 37px !important;
+  border-radius: 14px !important;
+  color: $color-1 !important;
+  // Styles pour le placeholder
+  &::placeholder {
+    background: transparent !important;
+    text-align: center !important;
+    color: $color-1 !important;
+  }
+  @media (max-width: 1200px) {
+    width: 270px !important;
+  }
+  // Styles au focus
+  &:focus {
+    background: $color-2 !important;
+    color: $color-1 !important;
+    text-align: center !important;
+  }
+  // Styles quand l'input est rempli
+  &:not(:placeholder-shown) {
+    background: $color-2 !important;
+    color: $color-1 !important;
+    text-align: center !important;
+  }
+  // Evite l'autocomplete styling
+  &:-webkit-autofill,
+  &:-webkit-autofill:active,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px $color-2 inset !important;
+    -webkit-text-fill-color: $color-1 !important;
+    background-color: $color-2 !important;
+  }
+}
+
+// style pour l'input textarea
+.message-textarea {
+  background: $color-2 !important;
+  margin: auto !important;
+  width: 609.38px !important;
+  height: 90px !important;
+  padding: 7px 20px !important;
+  border-radius: 21px !important;
+  color: $color-1 !important;
+  resize: none !important;
+  text-align: left !important;
+  &::placeholder {
+    background: $color-2 !important;
+    text-align: center !important;
+    color: $color-1 !important;
+  }
+  @media (max-width: 1200px) {
+    width: 270px !important;
+  }
+}
+
+// style pour le bouton
+button[type="submit"] {
+  margin-top: 52px !important;
+  width: 255.03px !important;
+  height: 44px !important;
+  @media (max-width: 1200px) {
+    width: 113px !important;
+    margin-top: 52px !important;
+  }
+}

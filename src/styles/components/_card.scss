@@ -1,0 +1,46 @@
+@import "../settings";
+
+* {
+  text-decoration: none !important;
+}
+
+.name,
+.note {
+  font-size: $font-size-3 !important;
+}
+.specialite,
+.localisation {
+  font-size: $font-size-4;
+}
+
+.basicCard {
+  width: 492px !important;
+  height: 334.5px !important;
+  border: 1px solid $color-4 !important;
+  border-radius: 20px !important;
+  background: $color-1 !important;
+  @media (max-width: 1200px) {
+    width: 371px !important;
+    height: 210px !important;
+  }
+}
+
+.HeaderCard {
+  height: 32px !important;
+  justify-content: center !important;
+  margin-top: 60px !important;
+  @media (max-width: 1200px) {
+    margin-top: 0 !important;
+  }
+}
+
+.MainCard {
+  height: 164px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  margin-left: 70px !important;
+  @media (max-width: 1200px) {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+}

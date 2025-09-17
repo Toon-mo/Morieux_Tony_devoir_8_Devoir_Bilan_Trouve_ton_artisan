@@ -1,0 +1,175 @@
+@import "../settings";
+
+* {
+  text-decoration: none !important;
+}
+
+.card-title {
+  font-size: $font-size-1 !important;
+}
+
+.specialite,
+.localisation,
+.aPropos {
+  font-size: $font-size-4;
+}
+
+.artisanCard {
+  width: 700px !important;
+  height: 542px !important;
+  border: 1px solid $color-6;
+  border-radius: 42px;
+  background: $color-1;
+  @media (max-width: 1200px) {
+    width: 326px !important;
+    height: 874px !important;
+  }
+}
+
+.headerArtisanCard {
+  margin: auto !important;
+  width: 652px !important;
+  height: 32px !important;
+  justify-content: center !important;
+}
+#mainArtisanCard {
+  @media (max-width: 1200px) {
+    flex-direction: column !important;
+  }
+}
+
+p {
+  width: 250px !important;
+}
+button {
+  min-height: 44px !important;
+  background-color: $color-2 !important;
+  border-radius: 20px !important;
+  color: $color-1 !important;
+}
+
+//Notation étoiles
+
+#starRating {
+  .rating-loading {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 0 !important;
+    background: url(../../assets/images/Star.png) top left no-repeat !important;
+    border: none !important;
+  }
+  .rating-container .rating-stars {
+    position: relative !important;
+    cursor: pointer !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+  .rating-container .rating-input {
+    position: absolute !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    height: 1px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    font-size: 1px !important;
+    border: none !important;
+    background: 0 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .rating-disabled .rating-input,
+  .rating-disabled .rating-stars {
+    cursor: not-allowed !important;
+  }
+  .rating-container .star {
+    display: inline-block !important;
+    margin: 0 3px !important;
+    text-align: center !important;
+  }
+  .rating-container .empty-stars {
+    color: $color-1 !important;
+  }
+  .rating-container .filled-stars {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: auto !important;
+    color: $color-6 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    -webkit-text-stroke: 1px $color-2;
+    text-shadow: 1px 1px $color-4;
+  }
+  .rating-rtl {
+    float: right !important;
+  }
+  .rating-animate .filled-stars {
+    transition: width 0.25s ease !important;
+    -o-transition: width 0.25s ease !important;
+    -moz-transition: width 0.25s ease !important;
+    -webkit-transition: width 0.25s ease !important;
+  }
+  .rating-rtl .filled-stars {
+    left: auto !important;
+    right: 0 !important;
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0) !important;
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0) !important;
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0) !important;
+    transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0) !important;
+  }
+  .rating-rtl.is-star .filled-stars {
+    right: 0.06em !important;
+  }
+  .rating-rtl.is-heart .empty-stars {
+    margin-right: 0.07em !important;
+  }
+  .rating-lg {
+    font-size: 3.91em !important;
+  }
+  .rating-md {
+    font-size: 3.13em !important;
+  }
+  .rating-sm {
+    font-size: 2.5em !important;
+  }
+  .rating-xs {
+    font-size: 2em !important;
+  }
+  .rating-xl {
+    font-size: 4.89em !important;
+  }
+  .rating-container .clear-rating {
+    color: $color-1 !important;
+    cursor: not-allowed !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    font-size: 60% !important;
+    padding-right: 5px !important;
+  }
+  .clear-rating-active {
+    cursor: pointer !important;
+  }
+  .clear-rating-active:hover {
+    color: $color-5 !important;
+  }
+  .rating-container .caption {
+    color: $color-1 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    font-size: 60% !important;
+    margin-top: -0.6em !important;
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+  }
+  .rating-rtl .caption {
+    margin-right: 5px !important;
+    margin-left: 0 !important;
+  }
+  @media print {
+    .rating-container .clear-rating {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../settings";
+
+* {
+  text-decoration: none !important;
+}
+
+.name,
+.note {
+  font-size: $font-size-3 !important;
+}
+.specialite,
+.localisation {
+  font-size: $font-size-4;
+}
+
+.MenuCard {
+  width: 371px !important;
+  height: 210px !important;
+  border: 1px solid $color-4 !important;
+  border-radius: 20px !important;
+  background: $color-1 !important;
+}
+
+.MenuHeaderCard {
+  height: 32px !important;
+  justify-content: center !important;
+}
+
+.container-left {
+  width: 120px !important;
+  height: 120px !important;
+}

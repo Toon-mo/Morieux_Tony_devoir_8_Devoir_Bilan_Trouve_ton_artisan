@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Graphik-Regular-Trial.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #f1f8fc;
+  font-family: "font-1", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bg-custom {
+  background-color: #f1f8fc;
+}
+
+.bg-custom-1 {
+  background-color: #0074c7;
+}
+
+.text-color1 {
+  color: #f1f8fc;
+}
+
+.text-color2 {
+  color: #0074c7;
+}
+
+.text-color3 {
+  color: #00497c;
+}
+
+.text-color4 {
+  color: #384050;
+}
+
+.text-color5 {
+  color: #cd2c2e;
+}
+
+.text-color6 {
+  color: #82b864;
+}
+
+.MainPage {
+  margin-top: 60px;
+}
+
+.imgCard {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.imgCard--medium {
+  width: 144px !important;
+  height: 144px !important;
+  border-radius: 20px !important;
+}
+.imgCard--large {
+  width: 220px !important;
+  height: 220px !important;
+  border-radius: 25px !important;
+}
+
+.container-img {
+  width: 461px;
+  height: 302px;
+  margin-right: 130px;
+}
+@media (max-width: 1160px) {
+  .container-img {
+    display: none !important;
+  }
+}
+
+.img-fluid {
+  border-radius: 10px;
+}
+
+.description {
+  width: 500px !important;
+  font-size: 1.25rem;
+}
+@media (max-width: 1160px) {
+  .description {
+    width: 400px !important;
+    font-size: 0.875rem;
+  }
+}
+
+.main-separation {
+  margin: 25px auto;
+  width: 40%;
+  border-bottom: 3px solid #cd2c2e;
+}/*# sourceMappingURL=HomePage.css.map */

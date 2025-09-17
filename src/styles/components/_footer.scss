@@ -1,0 +1,151 @@
+@import "../settings";
+
+.custom-footer-shape {
+  background-color: $color-2 !important; // Couleur principal du footer
+  color: $color-1 !important; // Couleur du texte
+  position: relative !important; // Essentiel pour positionner le pseudo-élément
+  width: 100% !important;
+  height: 423px !important;
+  font-size: 1.25rem !important;
+
+  @media (max-width: 1140px) {
+    font-size: 1.19rem !important;
+  }
+
+  @media (max-width: 830px) {
+    height: 494.9px !important;
+    font-size: 0.94rem !important;
+  }
+
+  // Ce padding-top sert à pouvoir personnaliser le haut du footer, sans masquer le contenu
+  padding-top: 100px !important;
+
+  // Création de la forme
+  &::before {
+    content: "";
+    position: absolute !important;
+    top: 0 !important; // position en haut du footer
+    left: 0 !important; //position à gauche
+    width: 100% !important;
+    //définit la zone dans laquelle la forme supérieure est créée.
+    height: 65px !important;
+    background-color: $color-1 !important;
+    border-radius: 0 0 65px 65px !important;
+    z-index: 0 !important; // Assure qu'il est au-dessus du background du footer, mais sous le contenu
+  }
+
+  //création d'un triangle, pour l'effet de bulle de dialogue
+  &::after {
+    content: "";
+    position: absolute !important;
+    //position du rectangle
+    top: 49px !important;
+    left: 80px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-right: 72px solid transparent !important; // découpe les angles
+    border-bottom: 103px solid $color-1 !important; // crée la base du triangle
+    rotate: 90deg !important; //retourne de 90 degrés pour que la base soit à gauche
+    z-index: 0 !important; // S'assure qu'il est au-dessus du background du footer, mais sous le contenu
+  }
+}
+
+// Conteneur principal
+.footer-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 15px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  @media (max-width: 686px) {
+    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    margin-left: -10px !important;
+  }
+}
+
+// Logo
+.container-left {
+  width: 295px !important;
+  height: 166px !important;
+  @media (max-width: 686px) {
+    height: 30px !important;
+  }
+}
+.logo {
+  @media (max-width: 686px) {
+    width: 240px !important;
+    height: 108px !important;
+  }
+}
+
+// Ligne de séparation
+.separation {
+  margin: auto !important;
+  margin-top: -35px !important;
+  width: 60% !important;
+  border-bottom: 3px solid $color-1 !important;
+  @media (max-width: 686px) {
+    width: 353px !important;
+  }
+}
+
+// Style pour les liens du footer
+.listItem {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  margin-top: 2rem !important;
+
+  .list-group-item {
+    border: none !important;
+    margin-bottom: 1rem !important;
+
+    a {
+      color: $color-1 !important;
+      text-decoration: none;
+      font-size: 1.1rem !important;
+      font-weight: 300 !important;
+      padding: 0.5rem !important; // Augmente la zone cliquable
+
+      &:hover,
+      &.active {
+        font-weight: bold !important;
+      }
+    }
+    @media (max-width: 1140px) {
+      text-align: start;
+    }
+  }
+
+  // Layout 2 colonnes pour mobile/tablette (≤830px)
+  @media (max-width: 830px) {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; // 2 colonnes égales
+    gap: 1rem 2rem !important; // gap vertical et horizontal réduit
+    max-width: 500px !important; // Limite la largeur sur mobile
+    margin: 2rem auto 0 !important; // Centre le conteneur
+    padding: 0 1rem !important;
+    text-align: center !important;
+
+    .list-group-item {
+      margin-bottom: 0.5rem !important; // Réduction de la marge basse pour mobile
+
+      a {
+        font-size: 0.95rem !important; // Légèrement plus petit sur mobile
+        display: block !important; // Assure que le padding s'applique correctement
+        padding: 0.5rem 0 !important;
+      }
+    }
+  }
+}
+
+.container-right {
+  @media (max-width: 960px) {
+    width: auto !important;
+    min-width: 185px !important;
+    height: auto !important; // Hauteur adaptative
+    min-height: 177px !important;
+  }
+}

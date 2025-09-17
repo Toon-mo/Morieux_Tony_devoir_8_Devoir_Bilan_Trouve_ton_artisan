@@ -1,0 +1,61 @@
+@import "../settings";
+
+.star-rating-container {
+  margin-top: 20px !important;
+  border-radius: 30px !important;
+}
+
+.star-rating {
+  margin-top: -10px !important;
+  padding: 5px !important;
+}
+.star-rating {
+  font-size: 2.25rem; // Ajustez la taille des étoiles si nécessaire
+  white-space: nowrap; // Empêche les étoiles de se séparer sur plusieurs lignes
+
+  .star-icon {
+    display: inline-block;
+    vertical-align: middle; // Alignement
+    line-height: 1; // Assure une hauteur de ligne compacte
+    width: 1.2em; // Fixe la largeur pour chaque icône étoile
+    text-align: center; // Centre l'icône dans sa boîte
+  }
+
+  .full-star {
+    color: $color-6; // Couleur de l'étoile pleine
+  }
+
+  .empty-star {
+    color: $color-1; // Couleur de l'étoile vide
+  }
+
+  .partial-star-container {
+    display: inline-block;
+    margin-top: 6px;
+    position: relative; // Conteneur pour positionner les éléments de remplissage
+    width: 1.2em; // Doit être la même largeur que .star-icon
+    height: 1.2em; // Doit être la même hauteur que .star-icon
+    overflow: hidden; // TRÈS IMPORTANT : Cache la partie de l'étoile de remplissage qui dépasse
+
+    .partial-star-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-6; // Couleur de la partie remplie
+      overflow: hidden; // Cache ce qui dépasse du remplissage
+      white-space: nowrap;
+      // La width est définie inline via style={{ width: `${percentage}%` }}
+    }
+
+    .empty-star-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-1 !important; // Couleur de l'arrière-plan (l'étoile vide)
+      z-index: -1 !important; // S'assure qu'elle est derrière la partie remplie
+      white-space: nowrap;
+      width: 100%; // L'arrière-plan couvre toute la largeur de l'étoile
+      height: 100%;
+    }
+  }
+}
