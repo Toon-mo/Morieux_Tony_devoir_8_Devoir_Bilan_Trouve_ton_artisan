@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="separation mt-1"></div>
 
             <div className="container-fluid">
-              <ul className="list-unstyled d-flex flex-wrap justify-content-evenly listItem">
+              <ul className="list-unstyled justify-content-evenly listItem">
                 <li className="list-group-item mb-4">
                   <a
                     className="text-decoration-none text-white"
