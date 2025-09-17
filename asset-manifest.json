@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/css/main.b666ecf9.css",
-    "main.js": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/js/main.3e4df2f4.js",
+    "main.js": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/js/main.a1f15017.js",
     "static/media/Atelier.jpg": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/media/Atelier.f1d05250984c9bb33e6a.jpg",
     "static/media/Graphik-Regular-Trial.otf": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/media/Graphik-Regular-Trial.e7f4046c1937c259c933.otf",
     "static/media/Traiteur.jpg": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/media/Traiteur.51b70d89d656279ba9ac.jpg",
@@ -22,10 +22,10 @@
     "static/media/Fleuriste.jpg": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/media/Fleuriste.b30fe475490ff03e8b22.jpg",
     "index.html": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/index.html",
     "main.b666ecf9.css.map": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/css/main.b666ecf9.css.map",
-    "main.3e4df2f4.js.map": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/js/main.3e4df2f4.js.map"
+    "main.a1f15017.js.map": "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/static/js/main.a1f15017.js.map"
   },
   "entrypoints": [
     "static/css/main.b666ecf9.css",
-    "static/js/main.3e4df2f4.js"
+    "static/js/main.a1f15017.js"
   ]
 }
