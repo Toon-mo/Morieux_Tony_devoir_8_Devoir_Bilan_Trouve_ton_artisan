@@ -13,7 +13,7 @@ const basename =
 
 const App = () => {
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename="/repo-name">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/categorie/:categoryName" element={<CategoryPage />} />
