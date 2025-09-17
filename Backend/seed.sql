@@ -1,3 +1,45 @@
+
+-- Désactive temporairement la vérification des clés étrangères
+SET FOREIGN_KEY_CHECKS = 0; -- Permet de supprimer/créer les tables dans n'importe quel ordre
+
+--
+-- Insertion des données dans la table des catégories
+--
+
+INSERT INTO `tab_categorie` (`id_categorie`, `categorie`) VALUES
+(1, 'Bâtiment'),    -- Métiers de la construction et rénovation
+(2, 'Services'),    -- Métiers de service à la personne
+(3, 'Fabrication'), -- Métiers de création et fabrication artisanale
+(4, 'Alimentation');-- Métiers de bouche et restauration
+--
+-- Insertion des données dans la table des spécialités
+--
+
+INSERT INTO `tab_specialite` (`id_specialite`, `specialite`, `id_categorie`) VALUES
+-- Spécialités alimentation (catégorie 4)
+(1, 'Boucher', 4),     -- Vente de viande
+(2, 'Boulanger', 4),   -- Fabrication de pain
+(3, 'Chocolatier', 4), -- Création de chocolats
+(4, 'Traiteur', 4),    -- Service de restauration
+
+-- Spécialités bâtiment (catégorie 1)
+(5, 'Chauffagiste', 1), -- Installation de chauffage
+(6, 'Electricien', 1),  -- Installation électrique
+(7, 'Menuisier', 1),    -- Travail du bois
+(8, 'Plombier', 1),     -- Installation sanitaire
+
+-- Spécialités fabrication (catégorie 3)
+(9, 'Bijoutier', 3),   -- Création de bijoux
+(10, 'Couturier', 3),  -- Confection de vêtements
+(11, 'Ferronier', 3),  -- Travail du métal
+
+-- Spécialités services (catégorie 2)
+(12, 'Coiffeur', 2),   -- Coupe et soin des cheveux
+(13, 'Fleuriste', 2),  -- Arrangement floral
+(14, 'Toiletteur', 2), -- Soin des animaux
+(15, 'Webdesign', 2);  -- Création de sites web
+
+--
 -- Insertion des données dans la table des artisans
 --
 
@@ -27,42 +69,9 @@ INSERT INTO `tab_artisan` (`id_artisan`, `nom_artisan`, `note`, `ville`, `a_prop
 (16, 'Valérie Laderoute', 4.5, 'Valence', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ', 'v-laredoute@gmail.com', '', 0, 14), -- Toiletteur
 (17, 'CM Graphisme', 4.4, 'Valence', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ', 'contact@cm-graphisme.com', 'https://cm-graphisme.com', 0, 15); -- Webdesign
 
---
--- Insertion des données dans la table des catégories
---
 
-INSERT INTO `tab_categorie` (`id_categorie`, `categorie`) VALUES
-(1, 'Bâtiment'),    -- Métiers de la construction et rénovation
-(2, 'Services'),    -- Métiers de service à la personne
-(3, 'Fabrication'), -- Métiers de création et fabrication artisanale
-(4, 'Alimentation');-- Métiers de bouche et restauration
-
---
--- Insertion des données dans la table des spécialités
---
-
-INSERT INTO `tab_specialite` (`id_specialite`, `specialite`, `id_categorie`) VALUES
--- Spécialités alimentation (catégorie 4)
-(1, 'Boucher', 4),     -- Vente de viande
-(2, 'Boulanger', 4),   -- Fabrication de pain
-(3, 'Chocolatier', 4), -- Création de chocolats
-(4, 'Traiteur', 4),    -- Service de restauration
-
--- Spécialités bâtiment (catégorie 1)
-(5, 'Chauffagiste', 1), -- Installation de chauffage
-(6, 'Electricien', 1),  -- Installation électrique
-(7, 'Menuisier', 1),    -- Travail du bois
-(8, 'Plombier', 1),     -- Installation sanitaire
-
--- Spécialités fabrication (catégorie 3)
-(9, 'Bijoutier', 3),   -- Création de bijoux
-(10, 'Couturier', 3),  -- Confection de vêtements
-(11, 'Ferronier', 3),  -- Travail du métal
-
--- Spécialités services (catégorie 2)
-(12, 'Coiffeur', 2),   -- Coupe et soin des cheveux
-(13, 'Fleuriste', 2),  -- Arrangement floral
-(14, 'Toiletteur', 2), -- Soin des animaux
-(15, 'Webdesign', 2);  -- Création de sites web
 
 COMMIT; -- Valide toutes les insertions
+
+-- Réactive la vérification des clés étrangères
+SET FOREIGN_KEY_CHECKS = 1; -- Remet la vérification normale des relations
