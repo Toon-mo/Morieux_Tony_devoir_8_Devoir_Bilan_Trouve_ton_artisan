@@ -6,9 +6,14 @@ import SearchResultsPage from "./views/SearchResultsPage";
 import LegalPage from "./views/LegalPage";
 import ErrorPage from "./views/ErrorPage";
 
+const basename =
+  process.env.NODE_ENV === "production"
+    ? "/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan"
+    : "/";
+
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/categorie/:categoryName" element={<CategoryPage />} />
