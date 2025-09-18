@@ -37,46 +37,52 @@ const Footer = () => {
             <div className="container-fluid">
               <ul className="list-unstyled d-flex flex-wrap justify-content-evenly listItem">
                 <li className="list-group-item mb-4">
-                  <a
+                  <Link
                     className="text-decoration-none text-white"
                     href="/mentions"
                   >
                     Mentions légales
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-group-item mb-4">
-                  <a
+                  <Link
                     className="text-decoration-none text-white"
                     href="/accessibilite"
                   >
                     Accessibilité
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-group-item mb-4">
-                  <a className="text-decoration-none text-white" href="/data">
+                  <Link
+                    className="text-decoration-none text-white"
+                    href="/data"
+                  >
                     Données personnelles
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-group-item mb-4">
-                  <a
+                  <Link
                     className="text-decoration-none text-white"
                     href="/contacts"
                   >
                     Contacts
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-group-item mb-4">
-                  <a className="text-decoration-none text-white" href="/presse">
+                  <Link
+                    className="text-decoration-none text-white"
+                    href="/presse"
+                  >
                     Presse
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-group-item mb-4">
-                  <a
+                  <Link
                     className="text-decoration-none text-white"
                     href="/cookies"
                   >
                     Cookies
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
