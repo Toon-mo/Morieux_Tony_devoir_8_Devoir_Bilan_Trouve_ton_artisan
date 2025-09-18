@@ -38,7 +38,7 @@ const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg shadow bg-custom">
       {/* Logo */}
-      <Link className="navbar-brand order-0" href="/">
+      <Link className="navbar-brand order-0" to="/">
         <img
           className="img-fluid"
           src={logoImg}
