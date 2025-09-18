@@ -94,6 +94,15 @@ trouver_mon_artisan_app/
 
 ## 🚀 Installation
 
+## Cloner le dépôt
+
+Pour commencer, clonez ce dépôt GitHub sur votre machine locale :
+
+```Bash
+git clone https://github.com/Toon-mo/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan.git
+cd Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan
+```
+
 ### 1. Base de données
 
 1. Ouvrez phpMyAdmin
@@ -106,28 +115,30 @@ trouver_mon_artisan_app/
 
 ```bash
 # Naviguez vers le dossier backend
-cd trouver_mon_artisan_app/backend
+
+cd Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/backend
 
 # Créez le fichier .env avec vos paramètres MySQL (accès local uniquement)
-echo "DB_HOST=127.0.0.1
+
+DB_HOST=127.0.0.1
 DB_USER=root
 DB_PASSWORD=
 DB_NAME=trouvetonartisanapi
 DB_DIALECT=mysql
-PORT=3001" > .env
+PORT=3001
 ```
 
 ### 3. Frontend
 
 ```bash
 # Naviguez vers le dossier racine
-cd trouver_mon_artisan_app
+cd..
 
 # Installez les dépendances
-npm install
+npm install --legacy-peer-deps
 
-# Créez le fichier .env
-echo "REACT_APP_API_URL=http://localhost:3001" > .env
+# Créez le fichier .env a la racine
+REACT_APP_API_URL=http://localhost:3001
 ```
 
 ## ▶️ Lancement
@@ -135,7 +146,7 @@ echo "REACT_APP_API_URL=http://localhost:3001" > .env
 ### Démarrer le backend
 
 ```bash
-cd trouver_mon_artisan_app/backend
+cd Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/backend
 node server.js
 ```
 
@@ -148,14 +159,14 @@ Vérifiez sur : http://localhost:3001/api/artisans/top
 ### Démarrer le frontend
 
 ```bash
-cd trouver_mon_artisan_app
+cd Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan
 npm start
 ```
 
 ## 📖 Livrables
 
-- 📊 **Rapport de conception** : [Lien vers le PDF](https://github.com/Toon-mo/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/blob/main/src/assets/Pdf/RAPPORT_DE_CONCEPTION_ET_D%C3%89VELOPPEMENT_Trouve_ton_artisan.pdf)
-- 🎨 **Maquettes Figma** : [Lien vers le projet Figma](https://www.figma.com/design/xOKsqnGnTt8A0tjQ3q9XyU/Devoir-Bilan-Morieux-Tony?node-id=0-1&t=mYo54lJSy2OAwu4I-1)
+- 📊 **Rapport de conception** : [Lien vers le PDF](../trouver_mon_artisan_app/src/assets/Pdf/RAPPORT_DE_CONCEPTION_ET_DÉVELOPPEMENT_Trouve_ton_artisan.pdf)
+- 🎨 **Maquettes Figma** : [[Lien vers le projet Figma](https://www.figma.com/design/xOKsqnGnTt8A0tjQ3q9XyU/Devoir-Bilan-Morieux-Tony?node-id=0-1&t=mYo54lJSy2OAwu4I-1)]
 - 🌐 **Application en ligne** : [Lien vers le site déployé](https://toon-mo.github.io/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/)
 
 ---
