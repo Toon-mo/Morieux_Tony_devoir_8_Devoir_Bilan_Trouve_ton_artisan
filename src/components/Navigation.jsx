@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router-dom";
 import "../styles/components/_navigation.scss";
 import logoImg from "../assets/images/Logo.png";
 import searchIcon from "../assets/images/SearchIcon.png";
@@ -38,7 +38,7 @@ const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg shadow bg-custom">
       {/* Logo */}
-      <a className="navbar-brand order-0" href="/">
+      <Link className="navbar-brand order-0" href="/">
         <img
           className="img-fluid"
           src={logoImg}
@@ -46,7 +46,7 @@ const Navigation = () => {
           width="295"
           height="166"
         />
-      </a>
+      </Link>
 
       {/* Bouton hamburger */}
       <div className="menuHamburger order-3">
