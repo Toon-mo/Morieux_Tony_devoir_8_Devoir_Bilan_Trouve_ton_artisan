@@ -165,7 +165,7 @@ npm start
 
 ## 📖 Livrables
 
-- 📊 **Rapport de conception** : [Lien vers le PDF](../trouver_mon_artisan_app/src/assets/Pdf/RAPPORT_DE_CONCEPTION_ET_DÉVELOPPEMENT_Trouve_ton_artisan.pdf)
+- 📊 **Rapport de conception** : [Lien vers le PDF](https://github.com/Toon-mo/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/blob/main/src/assets/pdf/RAPPORT%20DE%20CONCEPTION%20ET%20D%C3%89VELOPPEMENT.pdf)
 - 🎨 **Maquettes Figma** : [[Lien vers le projet Figma](https://www.figma.com/design/xOKsqnGnTt8A0tjQ3q9XyU/Devoir-Bilan-Morieux-Tony?node-id=0-1&t=mYo54lJSy2OAwu4I-1)]
 - 🌐 **Application en ligne** : [Lien vers le site déployé](https://toon-mo.github.io/Morieux_Tony_devoir_8_Devoir_Bilan_Trouve_ton_artisan/)
 
