@@ -12,9 +12,9 @@ const Footer = () => {
               className="container-left d-flex flex-column col-12 col-md-3 ms-5 ms-md-0 mb-5 mb-md-0"
               id="logo"
             >
-              <a className="logo mt-0" href="/">
+              <Link className="logo mt-0" to="/">
                 <img className="img-fluid" src={LogoImg2} alt="Logo" />
-              </a>
+              </Link>
             </div>
             <div
               className="container-right d-flex flex-column justify-content-center align-items-start col-12 col-md-3 ms-5 ms-md-0 mb-5"
@@ -39,7 +39,7 @@ const Footer = () => {
                 <li className="list-group-item mb-4">
                   <Link
                     className="text-decoration-none text-white"
-                    href="/mentions"
+                    to="/mentions"
                   >
                     Mentions légales
                   </Link>
@@ -47,23 +47,20 @@ const Footer = () => {
                 <li className="list-group-item mb-4">
                   <Link
                     className="text-decoration-none text-white"
-                    href="/accessibilite"
+                    to="/accessibilite"
                   >
                     Accessibilité
                   </Link>
                 </li>
                 <li className="list-group-item mb-4">
-                  <Link
-                    className="text-decoration-none text-white"
-                    href="/data"
-                  >
+                  <Link className="text-decoration-none text-white" to="/data">
                     Données personnelles
                   </Link>
                 </li>
                 <li className="list-group-item mb-4">
                   <Link
                     className="text-decoration-none text-white"
-                    href="/contacts"
+                    to="/contacts"
                   >
                     Contacts
                   </Link>
@@ -71,7 +68,7 @@ const Footer = () => {
                 <li className="list-group-item mb-4">
                   <Link
                     className="text-decoration-none text-white"
-                    href="/presse"
+                    to="/presse"
                   >
                     Presse
                   </Link>
@@ -79,7 +76,7 @@ const Footer = () => {
                 <li className="list-group-item mb-4">
                   <Link
                     className="text-decoration-none text-white"
-                    href="/cookies"
+                    to="/cookies"
                   >
                     Cookies
                   </Link>
