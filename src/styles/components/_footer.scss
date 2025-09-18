@@ -79,6 +79,15 @@
   }
 }
 
+.container-right {
+  @media (max-width: 960px) {
+    width: auto !important;
+    min-width: 185px !important;
+    height: auto !important; // Hauteur adaptative
+    min-height: 177px !important;
+  }
+}
+
 // Ligne de séparation
 .separation {
   margin: auto !important;
@@ -108,14 +117,15 @@
       font-size: 1.1rem !important;
       font-weight: 300 !important;
       padding: 0.5rem !important; // Augmente la zone cliquable
+      @media (max-width: 830px) {
+        margin-left: 25%;
+        text-align: start;
+      }
 
       &:hover,
       &.active {
         font-weight: bold !important;
       }
-    }
-    @media (max-width: 1140px) {
-      text-align: start;
     }
   }
 
@@ -138,14 +148,5 @@
         padding: 0.5rem 0 !important;
       }
     }
-  }
-}
-
-.container-right {
-  @media (max-width: 960px) {
-    width: auto !important;
-    min-width: 185px !important;
-    height: auto !important; // Hauteur adaptative
-    min-height: 177px !important;
   }
 }
