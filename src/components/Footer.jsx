@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/components/_footer.scss";
 import LogoImg2 from "../assets/images/Logo 2.png";
 
